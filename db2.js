@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose =require('mongoose');
 const mongoURL=process.env.mongourl;
-mongoose.connect('mongodb+srv://user1:admin1234@quiz.ubwjo.mongodb.net/?retryWrites=true&w=majority&tls=true');
+mongoose.connect(mongoURL);
 const db=mongoose.connection;
 
 db.on('connected',()=>{
